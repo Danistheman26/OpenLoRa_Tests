@@ -1,13 +1,15 @@
+// test parameters
+int t_pin = 7;        // trigger pin
+int period = 1200;    // time between inturrupts (transmissions)
+
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(7, OUTPUT);
+  pinMode(t_pin, OUTPUT);
   delay(2000);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  digitalWrite(7, LOW);
-  delay(1200);
-  digitalWrite(7, HIGH);
+  digitalWrite(t_pin, LOW);
+  delay(period);
+  digitalWrite(t_pin, HIGH);
   delay(5);
 }
